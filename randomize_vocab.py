@@ -1,3 +1,4 @@
+#(c) 2023 Martin Wendt
 import sys
 import random
 
