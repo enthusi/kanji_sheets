@@ -1,0 +1,48 @@
+\documentclass[twocolumn]{scrartcl}
+\usepackage{CJKutf8}
+\usepackage[calc]{picture}
+\usepackage{tikz}
+\usepackage{setspace}
+\usepackage
+[
+        a4paper,% other options: a3paper, a5paper, etc
+        left=2cm,
+        right=1.5cm,
+        top=1cm,
+        bottom=1cm,
+        % use vmargin=2cm to make vertical margins equal to 2cm.
+        % us  hmargin=3cm to make horizontal margins equal to 3cm.
+        % use margin=3cm to make all margins  equal to 3cm.
+]
+{geometry}
+\newlength{\karo}
+\newlength{\xkaro}
+\newlength{\ykaro}
+\newcounter{xkar}
+\newcounter{ykar}
+\definecolor{hellgrau}{gray}{.8}
+%x-Anzahl und y-Anzahl als Argument
+\newcommand{\kariert}[2]{ %
+\setlength{\unitlength}{1mm}\definecolor{hellgrau}{gray}{.8} %
+\setcounter{xkar}{#1}
+\setcounter{ykar}{#2}
+\setlength{\karo}{7.0mm}
+\setlength{\xkaro}{\value{xkar}\karo}
+\setlength{\ykaro}{\value{ykar}\karo}
+\stepcounter{xkar}
+\stepcounter{ykar}
+\begin{picture}(\xkaro,\ykaro) %
+\color{hellgrau} %
+\linethickness{0.12mm} %
+\multiput(0,0)(7,0){\value{xkar}}{\line(0,1){\ykaro}} %
+\multiput(0,0)(0,7){\value{ykar}}{\line(1,0){\xkaro}} %
+\end{picture}
+} 
+
+\setlength{\parindent}{0pt}
+\begin{document}
+\input{words_learn.tex}
+\cleardoublepage
+\input{words_full.tex}
+
+\end{document}
