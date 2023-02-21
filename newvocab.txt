@@ -538,3 +538,11 @@
 538:説:Auslegung
 539:鋭:spitz
 540:曽:zuvor
+541:増:zunehmen
+542:贈:schenken
+543:東:Osten
+544:棟:Firstbalken
+545:凍:gefroren
+546:妊:Empfängnis
+547:廷:Gerichtshof
+548:染:färben

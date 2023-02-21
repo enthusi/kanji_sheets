@@ -14,8 +14,8 @@ for line in infile:
     wordlist.append(word)
 full_list=wordlist.copy()
 
-start=-30
-end=-1
+start=240#-30
+end=540#-1
 
 if pick:
     start=0
